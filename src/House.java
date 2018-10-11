@@ -13,7 +13,7 @@ public class House {
     }
 
     public String toString(){
-        return "address " + address + "\nOwner :" + owner.getName() +"\n    " + owner.getAge();
+        return "Address : " + address +"\nType : " + type +"\nPrice : " + price +  "\nOwner\n    Name :" + owner.getName() +"\n    Age : " + owner.getAge();
     }
 
 
@@ -22,7 +22,9 @@ public class House {
     }
 
     public void setPrice(float price) {
-        this.price = price;
+        if(price >= 0) {
+            this.price = price;
+        }
     }
 
     public void setType(String type) {
