@@ -1,11 +1,12 @@
-public class SavingsAccount {
+public class SavingsAccount extends BankAccount implements Transactable, Taxable{
     private double balance;
 
     public SavingsAccount(){
-        balance = 0;
+        this ("no Name", 0, 0 );
     }
 
-    public SavingsAccount(double amount, String name){
+    public SavingsAccount(String name, int accnum, double amount){
+        super (name, accnum);
         setBalance(amount);
     }
 
@@ -15,5 +16,21 @@ public class SavingsAccount {
 
     public double getBalance() {
         return balance;
+    }
+
+    public void lodge(double amount) {
+        this.balance = this.balance + amount;
+
+    }
+
+    public void withdraw(double amount) {
+        this.balance = this.balance - amount;
+    }
+
+    public double calcTax() {
+        double tax;
+        double rate = .03;
+        tax = getBalance()*rate;
+        return tax;
     }
 }

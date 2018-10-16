@@ -1,4 +1,4 @@
-public class BankAccount implements Transactable{
+public class BankAccount{
     protected String name;
     protected int accnum;
 
@@ -31,11 +31,5 @@ public class BankAccount implements Transactable{
         return "Name : " + name +"\nAccount Number : " + accnum + "\n";
     }
 
-    public void lodge(double amount) {
 
-    }
-
-    public void withdraw(double amount) {
-
-    }
 }
