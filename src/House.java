@@ -4,6 +4,10 @@ public class House {
     private float price;
     private Person owner;
 
+    public House(){
+        this ("no address", "no type", 0.00f, "no name", 0);
+    }
+
     public House(String address, String type, float price, String personName, int personAge){
         setAddress(address);
         setType(type);

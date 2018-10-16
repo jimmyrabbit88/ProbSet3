@@ -1,4 +1,4 @@
-public class BankAccount{
+public abstract class BankAccount implements Transactable, Taxable{
     protected String name;
     protected int accnum;
 
