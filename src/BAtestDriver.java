@@ -7,7 +7,7 @@ public class BAtestDriver {
         SavingsAccount mySavings1 = new SavingsAccount("jason", 12, 1000);
         tax = mySavings1.calcTax();
         System.out.println(mySavings1.accnum);
-        System.out.println(mySavings1.balance);
+        //System.out.println(mySavings1.balance);
         System.out.println(tax);
     }
 }

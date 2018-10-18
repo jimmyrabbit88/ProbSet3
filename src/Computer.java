@@ -4,9 +4,10 @@ public class Computer implements IDable{
     protected Memory memory;
 
     public Computer(String make, String memType, int memSize){
+        setID("no Id");
         setMake(make);
-        memory = new Memory(memType, memSize);
-        setMemory(memory);
+        //memory = new Memory(memType, memSize);
+        setMemory(new Memory(memType, memSize));
 
 
     }
@@ -37,5 +38,9 @@ public class Computer implements IDable{
 
     public String getId() {
         return id;
+    }
+
+    public String toString(){
+        return "Id : " + getId() + "\nMake : " + getMake() + "\n" + memory.toString();
     }
 }

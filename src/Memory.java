@@ -28,6 +28,6 @@ public class Memory {
     }
 
     public String toString() {
-        return "Type : " + type + "\nSize : " + size + "\n";
+        return "Type : " + type + "\nSize : " + size + "Gb\n";
     }
 }
